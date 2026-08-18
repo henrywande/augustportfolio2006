@@ -1,113 +1,429 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Henry | Personal Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Augustinus Mukoya | Software Developer</title>
+<meta name="description" content="Portfolio of Augustinus Mukoya — Software Developer and final-year Computer Science student at NUST. Full-stack, mobile, and AI-agent projects.">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Default Theme -->
-  <link id="theme-style" rel="stylesheet" href="style-light.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Video Background -->
-<video autoplay muted loop id="bg-video">
-  <source src="video2.mp4" type="video/mp4">
-</video>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">AM</span>
+      Augustinus Mukoya
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
 
-<div class="overlay"></div>
-
-<div class="container">
-    <img src="images/image2.jpg" alt="Profile Picture" class="profile-img">
-
-    <h1>Augustinus Mukoya</h1>
-    <h2>Student | Developer | Innovator</h2>
-
-    <p class="about">
-      Welcome to my professional profile. I’m passionate about technology, creativity,
-      and building impactful solutions. Explore my world of hobbies, achievements, 
-      and connections.
-    </p>
-
-    <!-- Hobbies -->
-    <h3 class="section-title">My Hobbies</h3>
-    <div class="hobbies">
-      <div class="hobby"><i class="fas fa-code"></i> Coding</div>
-      <div class="hobby"><i class="fas fa-book-reader"></i> Reading</div>
-      <div class="hobby"><i class="fas fa-dumbbell"></i> Fitness</div>
-      <div class="hobby"><i class="fas fa-music"></i> Music</div>
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i class="fas fa-code"></i> Available for internships &amp; junior roles</span>
+      <h1>Augustinus Mukoya</h1>
+      <p class="role">Software Developer &amp; Final-Year Computer Science Student</p>
+      <p class="pitch">
+        I build full-stack web apps, mobile apps, and AI-agent tools — from a hackathon-built
+        LLM advisory agent to production booking systems. Currently a Junior Software Developer
+        at Dika Networking, finishing my Computer Science degree at NUST.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-diagram-project"></i> View Projects</a>
+        <a href="#contact" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a class="icon-btn" href="https://github.com/henrywande" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/augustinus-mukoya" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="icon-btn" href="mailto:augustinusmukoya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a class="icon-btn" href="tel:+264817893738" aria-label="Phone"><i class="fas fa-phone"></i></a>
+      </div>
     </div>
 
-    <!-- PROJECTS -->
-<section class="projects" id="projects">
-    <h2>My Work</h2>
-
-    <div class="project-gallery">
-
-        <div class="project-item">
-            <img src="image3.jpg" alt="Project 1">
-            <p class="caption">NFA Assistant Referee</p>
-        </div>
-
-        <div class="project-item">
-            <img src="image1.jpg" alt="Project 2">
-            <p class="caption">Marathon Runner</p>
-        </div>
-
-        <figure class="video-project2">
-            <video id="projectVideo" autoplay muted loop playsinline></video>
-            <figcaption>My Demo Projects (Video Showcase)</figcaption>
-        </figure>
-
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <img src="images/profile.jpg" alt="Augustinus Mukoya">
+      </div>
+      <div class="hero-badge"><span class="dot"></span> Windhoek, Namibia</div>
     </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <div class="section-kicker">About</div>
+      <h2 class="section-title">A bit about how I work</h2>
+      <p>
+        I'm a final-year <strong>Computer Science (Software Development)</strong> student at the
+        Namibia University of Science and Technology, and a <strong>Junior Software Developer</strong>
+        at Dika Networking CC since April 2024, where I design and implement full-stack solutions
+        and manage database systems and technical infrastructure.
+      </p>
+      <p>
+        Outside of client work, I build things that push me into new stacks — an LLM-powered
+        agentic AI tool at a Deep Learning hackathon, a Flutter mobile app for a local salon
+        business, and full-stack systems for real NUST use cases. I like software that ships and
+        gets used, not just demos.
+      </p>
+      <p>
+        Certified by Cisco (Python Essentials, Data Science) and MIT Open Learning (Python
+        Coding, Universal AI).
+      </p>
+    </div>
+    <ul class="fact-list">
+      <li>
+        <i class="fas fa-graduation-cap"></i>
+        <div>
+          <div class="label">Education</div>
+          <div class="value">BCompSci (Software Development), NUST — Final Year</div>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-briefcase"></i>
+        <div>
+          <div class="label">Current Role</div>
+          <div class="value">Junior Software Developer, Dika Networking CC</div>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-location-dot"></i>
+        <div>
+          <div class="label">Based in</div>
+          <div class="value">Windhoek, Namibia</div>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-language"></i>
+        <div>
+          <div class="label">Languages spoken</div>
+          <div class="value">English (Fluent), Oshiwambo (Native)</div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
 
-<!-- Social Links -->
-<h3 class="section-title">Connect With Me</h3>
-<div class="social-links">
-  <a href="https://tr.ee/XDqJDfTyzn" target="_blank"><i class="fas fa-tree"></i></a>
-   <a href="www.linkedin.com/in/augustinus-mukoya-henry" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="mailto:augustinusmukoya@gmail.com"><i class="fas fa-envelope"></i></a>
-</div>
+<section class="section section-alt" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Skills</div>
+      <h2 class="section-title">Technologies I work with</h2>
+      <p class="section-sub">Grounded in object-oriented programming and full-stack fundamentals, applied across web, mobile, and AI tooling.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3><i class="fas fa-code"></i> Languages</h3>
+        <div class="pill-row">
+          <span class="pill">Java</span>
+          <span class="pill">Python</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Kotlin</span>
+          <span class="pill">Dart</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Ballerina</span>
+          <span class="pill">HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3><i class="fas fa-layer-group"></i> Frameworks &amp; Libraries</h3>
+        <div class="pill-row">
+          <span class="pill">React.js</span>
+          <span class="pill">Node.js</span>
+          <span class="pill">Express.js</span>
+          <span class="pill">FastAPI</span>
+          <span class="pill">Flutter</span>
+          <span class="pill">Android SDK</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3><i class="fas fa-toolbox"></i> Tools &amp; Practices</h3>
+        <div class="pill-row">
+          <span class="pill">Git &amp; GitHub</span>
+          <span class="pill">Docker</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">JWT Auth</span>
+          <span class="pill">REST API Design</span>
+          <span class="pill">JIRA</span>
+          <span class="pill">Agile / Sprints</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<button class="theme-toggle" onclick="toggleTheme()">
-  <i class="fas fa-adjust"></i> Switch Theme
-</button>
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Projects</div>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-sub">A mix of hackathon builds, client work, and full-stack systems — solo and in teams.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>SavannaCompass</h3>
+            <div class="project-tag">LLM Rangeland &amp; Livestock Advisory Agent</div>
+          </div>
+        </div>
+        <p class="desc">
+          Built at the Deep Learning IndabaX Namibia 2026 Hackathon. An agentic AI tool where an
+          LLM dynamically calls rangeland-data, live weather, and herd-sizing tools to answer
+          Namibian farmers' grazing questions by web chat or SMS.
+        </p>
+        <div class="tech-row">
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">FastAPI</span>
+          <span class="tech-chip">pandas</span>
+          <span class="tech-chip">LLM tool-calling</span>
+        </div>
+        <a class="project-link" href="https://github.com/AKChumba/Savannah-Compass" target="_blank" rel="noopener">
+          View Code <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>GlowSlot</h3>
+            <div class="project-tag">Salon Booking Mobile App</div>
+          </div>
+          <span class="badge-private"><i class="fas fa-lock"></i> Private repo</span>
+        </div>
+        <p class="desc">
+          Flutter mobile app helping small businesses take bookings online. Redesigned onboarding
+          and login UI, fixed reported bugs, wired booking screens to live data, and integrated
+          the Google Maps API.
+        </p>
+        <div class="tech-row">
+          <span class="tech-chip">Flutter</span>
+          <span class="tech-chip">Dart</span>
+          <span class="tech-chip">Android</span>
+          <span class="tech-chip">Google Maps API</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>NUST Attendance Tracking System</h3>
+            <div class="project-tag">Full-Stack Web App</div>
+          </div>
+          <span class="badge-private"><i class="fas fa-lock"></i> Private repo</span>
+        </div>
+        <p class="desc">
+          Role-based attendance system for NUST classes (admin / lecturer / student) with JWT
+          authentication, session-based attendance marking, and automated email alerts —
+          delivered across defined agile sprints.
+        </p>
+        <div class="tech-row">
+          <span class="tech-chip">React.js</span>
+          <span class="tech-chip">Node.js</span>
+          <span class="tech-chip">Express.js</span>
+          <span class="tech-chip">MySQL</span>
+          <span class="tech-chip">JWT</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>NUST Campus Event Booking System</h3>
+            <div class="project-tag">Solo Project</div>
+          </div>
+        </div>
+        <p class="desc">
+          Single-page event booking app with a full CRUD admin panel, live filtering/search,
+          modal-driven forms with toast notifications, and a stats dashboard.
+        </p>
+        <div class="tech-row">
+          <span class="tech-chip">HTML5</span>
+          <span class="tech-chip">CSS3</span>
+          <span class="tech-chip">Vanilla JS</span>
+        </div>
+        <a class="project-link" href="https://github.com/henrywande/SPS" target="_blank" rel="noopener">
+          View Code <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>DSA RESTful API</h3>
+            <div class="project-tag">University Asset-Management API</div>
+          </div>
+        </div>
+        <p class="desc">
+          A RESTful API following REST principles to manage university assets and their
+          relationships — add/update/delete/search across related entities, containerized
+          with Docker.
+        </p>
+        <div class="tech-row">
+          <span class="tech-chip">Ballerina</span>
+          <span class="tech-chip">Docker</span>
+          <span class="tech-chip">REST API Design</span>
+        </div>
+        <a class="project-link" href="https://github.com/eddiemurphy1315/DSA_RESTful_API_2025" target="_blank" rel="noopener">
+          View Code <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>Valentine's Garage</h3>
+            <div class="project-tag">Truck Check-In &amp; Repair Tracking</div>
+          </div>
+        </div>
+        <p class="desc">
+          Group Android app (5-person team) replacing a garage's manual process with a shared,
+          real-time repair task list per vehicle — role-based screens for receptionists,
+          mechanics, and the owner.
+        </p>
+        <div class="tech-row">
+          <span class="tech-chip">Kotlin</span>
+          <span class="tech-chip">Android Studio</span>
+        </div>
+        <a class="project-link" href="https://github.com/eddiemurphy1315/valantines_garage_app" target="_blank" rel="noopener">
+          View Code <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </article>
+
+    </div>
+
+    <p class="more-projects">
+      More on <a href="https://github.com/henrywande" target="_blank" rel="noopener">github.com/henrywande</a>
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt" id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Experience</div>
+      <h2 class="section-title">Where I've worked</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Junior Software Developer — Dika Networking CC</h3>
+        <div class="meta">April 2024 – Present</div>
+        <ul>
+          <li>Design and implement full-stack software solutions for clients</li>
+          <li>Manage and maintain database systems and technical infrastructure</li>
+          <li>Collaborate within a development team while delivering independent work with strong attention to detail</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Call Center Representative — YANGO Call Center</h3>
+        <div class="meta">2026</div>
+        <ul>
+          <li>Handled customer queries and support requests in a fast-paced service environment</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Fruits &amp; Wholesale Assistant — NIDA</h3>
+        <div class="meta">December – February (Seasonal)</div>
+        <ul>
+          <li>Supported wholesale operations during the seasonal peak period</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Education &amp; Certifications</div>
+      <h2 class="section-title">Background</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3><i class="fas fa-graduation-cap"></i> Namibia University of Science and Technology</h3>
+        <p>Bachelor of Computer Science — Software Development</p>
+        <p>2024 – 2027 · Final year (NQF L6 Diploma level completed 2025)</p>
+      </div>
+      <div class="edu-card">
+        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+        <ul class="cert-list">
+          <li><i class="fas fa-check"></i> Cisco Networking Academy — Python Essentials 1</li>
+          <li><i class="fas fa-check"></i> Cisco Networking Academy — Intro to Data Science</li>
+          <li><i class="fas fa-check"></i> MIT Open Learning — Python Coding, Part 1</li>
+          <li><i class="fas fa-check"></i> MIT Open Learning — Intro to Universal AI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <h2>Let's build something</h2>
+      <p>Open to internships, junior developer roles, and freelance/collab work. Reach out any of these ways:</p>
+      <div class="contact-links">
+        <a href="mailto:augustinusmukoya@gmail.com"><i class="fas fa-envelope"></i> augustinusmukoya@gmail.com</a>
+        <a href="tel:+264817893738"><i class="fas fa-phone"></i> +264 81 789 3738</a>
+        <a href="https://github.com/henrywande" target="_blank" rel="noopener"><i class="fab fa-github"></i> github.com/henrywande</a>
+        <a href="https://www.linkedin.com/in/augustinus-mukoya" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
-  &copy; 2025 Henry Mukoya | All Rights Reserved
+  &copy; <span id="year"></span> Augustinus Mukoya · Windhoek, Namibia
 </footer>
 
-</div>
-
 <script>
-  function toggleTheme() {
-    const theme = document.getElementById("theme-style");
-    theme.href = theme.href.includes("style-light.css")
-      ? "style-dark.css"
-      : "style-light.css";
+  // Theme toggle with persistence
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
   }
-</script>
-
-<script>
-    const videoElement = document.getElementById("projectVideo");
-    const videos = ["vid1.mp4", "vid1.mp4"];
-    let currentVideo = 0;
-
-    function playNextVideo() {
-        videoElement.src = videos[currentVideo];
-        videoElement.play();
-        currentVideo = (currentVideo + 1) % videos.length;
+  themeToggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
+  });
 
-    playNextVideo();
-    setInterval(playNextVideo, 10000);
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
